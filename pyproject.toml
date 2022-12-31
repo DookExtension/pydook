@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydook"
+description = "Manipulate data files with Python scripts and get output"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["repl"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 5 - Production",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers"
+]
+authors = [
+    {name = "Ege Emir Özkan", email = "egeemirozkan24@gmail.com"}
+] 
+dynamic = ["version"]
+
+[project.scripts]
+my-script = "pydook:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "pydook.__VERSION__"}
